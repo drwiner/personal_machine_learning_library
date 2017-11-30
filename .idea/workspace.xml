@@ -18,8 +18,8 @@
       <file leaf-file-name="perceptron.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perceptron.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="181" column="16" lean-forward="false" selection-start-line="181" selection-start-column="16" selection-end-line="181" selection-end-column="22" />
+            <state relative-caret-position="7106">
+              <caret line="323" column="13" lean-forward="true" selection-start-line="323" selection-start-column="13" selection-end-line="323" selection-end-column="13" />
               <folding>
                 <element signature="e#84#131#0" expanded="true" />
               </folding>
@@ -30,8 +30,8 @@
       <file leaf-file-name="experiment.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2031">
-              <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="52" />
+            <state relative-caret-position="1033">
+              <caret line="111" column="47" lean-forward="false" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
               <folding>
                 <element signature="e#22#69#0" expanded="true" />
               </folding>
@@ -42,8 +42,8 @@
       <file leaf-file-name="learning_util.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learning_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="623">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SVM.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SVM.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SVM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
-              <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+            <state relative-caret-position="68">
+              <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="79" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -74,8 +74,8 @@
       <file leaf-file-name="LOG_REGRESSION.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LOG_REGRESSION.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="55" />
+            <state relative-caret-position="376">
+              <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -86,28 +86,20 @@
       <file leaf-file-name="NAIVE_BAYES.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NAIVE_BAYES.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="340">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cross_validation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cross_validation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7657">
-              <caret line="384" column="17" lean-forward="true" selection-start-line="384" selection-start-column="17" selection-end-line="384" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ID3.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ID3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ID3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="162" column="41" lean-forward="true" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
+            <state relative-caret-position="579">
+              <caret line="172" column="21" lean-forward="false" selection-start-line="172" selection-start-column="21" selection-end-line="172" selection-end-column="21" />
               <folding>
                 <element signature="e#49#76#0" expanded="true" />
               </folding>
@@ -128,6 +120,7 @@
     <findStrings>
       <find>best_feature</find>
       <find>shuff</find>
+      <find>perceptron_method</find>
       <find>gain</find>
     </findStrings>
   </component>
@@ -137,13 +130,13 @@
         <option value="$PROJECT_DIR$/experiment.py" />
         <option value="$PROJECT_DIR$/SVM.py" />
         <option value="$PROJECT_DIR$/clockdeco.py" />
+        <option value="$PROJECT_DIR$/NAIVE_BAYES.py" />
+        <option value="$PROJECT_DIR$/SVM_OVER_TREES.py" />
+        <option value="$PROJECT_DIR$/learning_util.py" />
+        <option value="$PROJECT_DIR$/ID3.py" />
+        <option value="$PROJECT_DIR$/SVM.py" />
         <option value="$PROJECT_DIR$/experiment.py" />
         <option value="$PROJECT_DIR$/LOG_REGRESSION.py" />
-        <option value="$PROJECT_DIR$/NAIVE_BAYES.py" />
-        <option value="$PROJECT_DIR$/learning_util.py" />
-        <option value="$PROJECT_DIR$/SVM_OVER_TREES.py" />
-        <option value="$PROJECT_DIR$/SVM.py" />
-        <option value="$PROJECT_DIR$/ID3.py" />
       </list>
     </option>
   </component>
@@ -221,7 +214,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.ID3">
+  <component name="RunManager" selected="Python.experiment">
     <configuration default="false" name="experiment" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -252,6 +245,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="hw5" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ID3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LOG_REGRESSION" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="hw5" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LOG_REGRESSION.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -401,14 +411,16 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.experiment" />
       <item index="1" class="java.lang.String" itemvalue="Python.ID3" />
+      <item index="2" class="java.lang.String" itemvalue="Python.LOG_REGRESSION" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.ID3" />
-        <item index="1" class="java.lang.String" itemvalue="Python.experiment" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.experiment" />
+        <item index="1" class="java.lang.String" itemvalue="Python.LOG_REGRESSION" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ID3" />
       </list>
     </recent_temporary>
   </component>
@@ -435,11 +447,11 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976282" sideWeight="0.4984375" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976282" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976282" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39938793" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39938793" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -455,11 +467,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/experiment.py</url>
-          <line>98</line>
+          <url>file://$PROJECT_DIR$/LOG_REGRESSION.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -474,13 +487,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perceptron.py">
+    <entry file="file://$PROJECT_DIR$/SVM_OVER_TREES.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="181" column="16" lean-forward="false" selection-start-line="181" selection-start-column="16" selection-end-line="181" selection-end-column="22" />
-          <folding>
-            <element signature="e#84#131#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -492,74 +503,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NAIVE_BAYES.py">
+    <entry file="file://$PROJECT_DIR$/perceptron.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="7106">
+          <caret line="323" column="13" lean-forward="true" selection-start-line="323" selection-start-column="13" selection-end-line="323" selection-end-column="13" />
+          <folding>
+            <element signature="e#84#131#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cross_validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7657">
-          <caret line="384" column="17" lean-forward="true" selection-start-line="384" selection-start-column="17" selection-end-line="384" selection-end-column="17" />
+        <state relative-caret-position="-1106">
+          <caret line="385" column="30" lean-forward="false" selection-start-line="385" selection-start-column="29" selection-end-line="385" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learning_util.py">
+    <entry file="file://$PROJECT_DIR$/NAIVE_BAYES.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LOG_REGRESSION.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="55" />
+        <state relative-caret-position="340">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ID3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="172" column="21" lean-forward="false" selection-start-line="172" selection-start-column="21" selection-end-line="172" selection-end-column="21" />
+          <folding>
+            <element signature="e#49#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learning_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2031">
-          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="52" />
+        <state relative-caret-position="1033">
+          <caret line="111" column="47" lean-forward="false" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
           <folding>
             <element signature="e#22#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVM.py">
+    <entry file="file://$PROJECT_DIR$/LOG_REGRESSION.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        <state relative-caret-position="376">
+          <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVM_OVER_TREES.py">
+    <entry file="file://$PROJECT_DIR$/SVM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ID3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="162" column="41" lean-forward="true" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
+        <state relative-caret-position="68">
+          <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="79" />
           <folding>
-            <element signature="e#49#76#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

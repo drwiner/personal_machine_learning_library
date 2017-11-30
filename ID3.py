@@ -58,7 +58,7 @@ def num_samples_with_label(samples, target_label):
 def all_samples_target(samples, target_label):
 	return len(samples) == num_samples_with_label(samples, target_label)
 
-@clock
+# @clock
 def best_feature(examples, feature_list):
 	best = (-1, None)
 	entropy_examples = entropy(examples)
@@ -80,6 +80,7 @@ def most_labeled(samples, target_labels):
 
 
 # ID3 with option to limit depth
+@clock
 def ID3_depth(examples, features, depth):
 
 	for tlabel in [1, -1]:
@@ -164,7 +165,7 @@ if __name__ == '__main__':
 
 	# training_examples = [parse(base_cvsplits.format(i), lfi) for i in range(5)]
 	dtrees = []
-	for i in range(2):
+	for i in range(1000):
 		sub_set = get_x(examples, 100)
 		dtree = ID3_depth(sub_set, range(lfi), 3)
 		dtrees.append(dtree)

@@ -2,63 +2,65 @@
 from collections import namedtuple, defaultdict
 import numpy as np
 import random
+from SVM import svm, test_svm
+from LOG_REGRESSION import log_regression, test_log_regression
+from clockdeco import clock
 
 ZERO_PAD = 300
 
 LabeledEx = namedtuple('LabeledEx', ['label', 'feats'])
 
+# @clock
+def run_svms(example_sets, num_sets, largest_index):
 
-# def dot_w_indices(feat_indices, np_array):
-# 	return sum(np_array[i] for i in feat_indices)
-#
-#
-# def get_random_example(examples):
-# 	rand_int = random.randrange(0, len(examples))
-# 	return examples[rand_int]
+	# each 'i' is test
+	for i in range(len(example_sets)):
+		# each 'j' is training
+		training = []
+		for j in range(len(example_sets)):
+			if i == j:
+				continue
+			training.extend(example_sets[j])
 
-def logreg(examples, weights, bias, tradeoff, learn_rate, epochs):
-	for epoch in range(epochs):
-		pass
-		# example = get_random_example(examples)
+		initial_weights = np.array([0.00001 for k in range(largest_index)] + [1])
 
+		learn_rates = [10, 1, .1, .01, .001, .0001]
+		tradeoffs = [10, 1, .1, .01, .001, .0001]
 
-def svm(examples, weights, bias, tradeoff, learn_rate, epochs):
-	pass
-# def svm(examples, weights, bias, tradeoff, learn_rate, epochs):
-# 	# num_errors = 0
-# 	for epoch in range(epochs):
-#
-# 		for example in examples:
-# 			if example.label * dot_w_indices(example.feats, np.transpose(weights)) <= 1:
-# 				weights = (1 - learn_rate) * weights + learn_rate * tradeoff * example.label * example.feats
-#
-# 		# Randomly pick an example
-# 		example = get_random_example(examples)
-#
-# 		# Treat example as a full data set, take derivative of objective at current weight
-# 		margin = 0.5 * np.transpose(weights) * weights
-# 		slack = max(0, 1 - example.label * dot_w_dict(example.feats, np.transpose(weights)))
-# 		deriv = margin + tradeoff * slack
-#
-# 		# update
-# 		weights = weights - learn_rate * deriv
-# 		bias = bias + learn_rate*example.label
-#
-# 	# print('updates:\t{}'.format(num_errors))
-# 	return weights, bias
+		# train with 4/5
+		# this weight_vals_list has a position for each learning rate
+		print('fold:\t{}'.format(str(i)))
+		for lr in learn_rates:
+			for to in tradeoffs:
+
+				w = svm(training, initial_weights, to, lr, 40)
+				test_svm(example_sets[i], w)
 
 
-def run_svms(examples, largest_index):
-	initial_weights = np.array([0.00001 for j in range(largest_index+3)])
-	bias = 0.00001
-	learn_rates = [10, 1, .1, .01, .001, .0001]
-	tradeoffs = [10, 1, .1, .01, .001, .0001]
+def run_logregressions(example_sets, num_sets, largest_index):
 
-	results = []
-	for lr in learn_rates:
-		for to in tradeoffs:
-			w, b = svm(examples, initial_weights, to, lr, 40)
-			results.append((w,b))
+	# each 'i' is test
+	for i in range(len(example_sets)):
+		# each 'j' is training
+		training = []
+		for j in range(len(example_sets)):
+			if i == j:
+				continue
+			training.extend(example_sets[j])
+
+		initial_weights = np.array([0.00001 for k in range(largest_index)] + [1])
+
+		learn_rates = [1, .1, .01, .001, .0001, .00001]
+		sigmas = [.1, 1, 10, 100, 1000, 10000]
+
+		# train with 4/5
+		# this weight_vals_list has a position for each learning rate
+		print('fold:\t{}'.format(str(i)))
+		for lr in learn_rates:
+			for sigma in sigmas:
+				print('learn_rate\t{}\tsigma_squared\t{}'.format(lr, sigma))
+				w = log_regression(training, initial_weights, sigma, lr, 400)
+				test_log_regression(example_sets[i], w)
 
 
 def get_largest_index(training_whole):
@@ -78,8 +80,8 @@ def parse(file_name, num_feats):
 		for line in fn:
 			linsp = line.split()
 			label = int(linsp[0])
-			feats = [feat.split(":")[0] for feat in linsp[1:]]
-			feat_vec = np.zeros(num_feats + ZERO_PAD)
+			feats = [int(feat.split(":")[0]) for feat in linsp[1:]]
+			feat_vec = np.zeros(num_feats)
 			for f in feats:
 				feat_vec[f] = 1.0
 			examples.append(LabeledEx(label, feat_vec))
@@ -97,3 +99,15 @@ if __name__ == '__main__':
 	lfi = max(get_largest_index(training_whole), get_largest_index(test))
 
 	training_examples = [parse(base_cvsplits.format(i), lfi) for i in range(5)]
+
+	# run_svms(training_examples, len(training_examples), lfi)
+	# initial_weights = np.array([0.00001 for k in range(lfi+1)] + [1])
+	# w = svm(parse(training_whole, lfi+1), initial_weights, 10, 0.0001, 40)
+	# test_svm(parse(test, lfi+1), w)
+
+	# run_logregressions(training_examples, len(training_examples), lfi)
+
+
+	initial_weights = np.array([0.00001 for k in range(lfi+1)] + [1])
+	w = log_regression(parse(training_whole, lfi+1), initial_weights, 10, 0.0001, 40)
+	test_log_regression(parse(test, lfi+1), w)
