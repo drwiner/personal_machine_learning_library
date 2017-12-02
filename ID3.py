@@ -12,6 +12,7 @@ LabeledEx = namedtuple('LabeledEx', ['label', 'feats'])
 BINARY_LIST = [0,1]
 Y_VALS = [1, -1]
 
+
 """
 features are integers
 """
@@ -25,7 +26,7 @@ def gain(examples, feature, example_entropy):
 
 	return example_entropy - total_gain
 
-
+# @clock
 def entropy(examples):
 	total = len(examples)
 	if total == 0:
@@ -42,7 +43,10 @@ def entropy(examples):
 		if p_pos == 0:
 			return 0
 		return -p_pos * math.log2(p_pos)
-	return -p_pos * math.log2(p_pos) - p_neg * math.log2(p_neg)
+	entropy_value = -p_pos * math.log2(p_pos) - p_neg * math.log2(p_neg)
+
+	return entropy_value
+
 
 
 #### ID3 and DECISION TREE ####
@@ -58,17 +62,19 @@ def num_samples_with_label(samples, target_label):
 def all_samples_target(samples, target_label):
 	return len(samples) == num_samples_with_label(samples, target_label)
 
-# @clock
+@clock
 def best_feature(examples, feature_list):
-	best = (-1, None)
+	best = [-1, None]
 	entropy_examples = entropy(examples)
 	for feature in feature_list:
 		x = gain(examples, feature, entropy_examples)
 		if x > best[0]:
-			best = (x, feature)
+			best[0] = x
+			best[1] = feature
 	return best[1]
 
 
+# @clock
 def most_labeled(samples, target_labels):
 	best = (-1, None)
 	for tlabel in target_labels:
@@ -80,7 +86,7 @@ def most_labeled(samples, target_labels):
 
 
 # ID3 with option to limit depth
-@clock
+# @clock
 def ID3_depth(examples, features, depth):
 
 	for tlabel in [1, -1]:
@@ -93,7 +99,7 @@ def ID3_depth(examples, features, depth):
 
 	# Pick Best Feature (integer
 	if len(features) == 1:
-		best_f = list(features)[0]
+		best_f = features[0]
 	else:
 		best_f = best_feature(examples, features)
 
@@ -118,7 +124,7 @@ def ID3_depth(examples, features, depth):
 def use_tree(tree, item):
 
 	# base case, the tree is a value
-	if type(tree) is bool:
+	if type(tree) is bool or type(tree) is int:
 		return tree
 
 	# otherwise, recursively evaluate item with features
@@ -144,13 +150,26 @@ def get_x(examples, x):
 	return z[:x]
 
 
+@clock
+def experimental_wrapper(s, r, k):
+	return ID3_depth(s, r, k)
+
+
+
 def get_x_trees(examples, lfi):
 	dtrees = []
 	for i in range(1000):
-		sub_set = get_x(training_whole, 100)
-		dtree = ID3_depth(sub_set, range(lfi), 3)
+		print(i)
+		sub_set = get_x(examples, 100)
+		relevant_feats = []
+		for example in sub_set:
+			relevant_feats.extend(example.feats)
+		relevant_feats = list(set(relevant_feats))
+		dtree = experimental_wrapper(sub_set, relevant_feats, 3)
 		dtrees.append(dtree)
 	return dtrees
+
+
 
 if __name__ == '__main__':
 	# read input
@@ -163,14 +182,22 @@ if __name__ == '__main__':
 	lfi = max(get_largest_index(training_whole), get_largest_index(test))
 	examples = parse(training_whole, lfi)
 
-	# training_examples = [parse(base_cvsplits.format(i), lfi) for i in range(5)]
-	dtrees = []
-	for i in range(1000):
-		sub_set = get_x(examples, 100)
-		dtree = ID3_depth(sub_set, range(lfi), 3)
-		dtrees.append(dtree)
+	"""
+	before doing anything, for each feature, calculate entropy for the whole dataset based on that feature
+	"""
+	# entropy_dimension_dict(
+	# for i in range(1, lfi+1):
 
-	with open("dtrees.txt", 'w') as dtree_file:
+
+	# training_examples = [parse(base_cvsplits.format(i), lfi) for i in range(5)]
+	dtrees = get_x_trees(examples, 100)
+	# for i in range(1000):
+	# 	dtree = get_x(examples, 100)
+	# 	# dtree = experimental_wrapper(sub_set, range(lfi), 3)
+	# 	dtrees.append(dtree)
+	# 	print(dtree)
+
+	with open("dtrees3.txt", 'w') as dtree_file:
 		for dtree in dtrees:
-			dtree.write(str(dtree))
-			dtree.write('\n')
+			dtree_file.write(str(dtree))
+			dtree_file.write('\n')

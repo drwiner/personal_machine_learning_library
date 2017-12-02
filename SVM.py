@@ -47,7 +47,7 @@ def test_svm(examples, weights):
 
 
 from ID3 import use_tree
-from learning_util import parse, get_largest_index
+from learning_util import get_largest_index
 
 
 def transform_trees_to_feats(examples, trees):
@@ -65,9 +65,9 @@ if __name__ == '__main__':
 
 	lfi = max(get_largest_index(training_whole), get_largest_index(test))
 
+	from learning_util import parse
+
 	examples = parse(training_whole, lfi, 0)
-
-
 
 	test_examples = parse(test, lfi, 0)
 

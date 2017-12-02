@@ -16,16 +16,16 @@ def get_largest_index(training_whole):
 
 
 
-def parse(file_name, num_feats, ZERO_PAD=0):
-	examples = []
-	with open(file_name, 'r') as fn:
-		for line in fn:
-			linsp = line.split()
-			label = int(linsp[0])
-			feats = [feat.split(":")[0] for feat in linsp[1:]]
-			feat_vec = np.zeros(num_feats + ZERO_PAD)
-			for f in feats:
-				feat_vec[f] = 1.0
-			examples.append(LabeledEx(label, feat_vec))
-
-	return examples
+# def parse(file_name, num_feats, ZERO_PAD=0):
+# 	examples = []
+# 	with open(file_name, 'r') as fn:
+# 		for line in fn:
+# 			linsp = line.split()
+# 			label = int(linsp[0])
+# 			feats = [feat.split(":")[0] for feat in linsp[1:]]
+# 			feat_vec = np.zeros(num_feats + ZERO_PAD)
+# 			for f in feats:
+# 				feat_vec[f] = 1.0
+# 			examples.append(LabeledEx(label, feat_vec))
+#
+# 	return examples
